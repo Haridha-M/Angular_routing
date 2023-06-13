@@ -1,0 +1,56 @@
+<p>employee?</p>
+<form #myForm="ngForm" ngForm="myForm">
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" [(ngModel)]="name" name="name" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Age</label>
+      <input type="text" [(ngModel)]="age" name="age" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Location</label>
+      <input type="text" [(ngModel)]="location" name="location" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Gender</label>
+      <div>
+        <label>
+          <input type="radio" [(ngModel)]="gender" name="gender" value="male"> Male
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="gender"  name="gender" value="female"> Female
+        </label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Favorite Color</label>
+      <select [(ngModel)]="color"  name="color" class="form-control">
+        <option value="">Select color</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Hobbies</label>
+      <div>
+        <label>
+          <input type="checkbox" ngModel name="hobbies" value="reading"> Reading
+        </label>
+        <label>
+          <input type="checkbox" ngModel name="hobbies" value="painting"> Painting
+        </label>
+        <label>
+          <input type="checkbox" ngModel name="hobbies" value="cooking"> Cooking
+        </label>
+      </div>
+    </div>
+    <div>
+      <button (click)="insertUserEmployee()" [hidden]="visible">Submit</button>
+      <button (click)="updateUserEmployee()" [hidden]="!visible">update</button>
+      <button (click)="getEmployeeTable()">Next</button>
+    </div>
+  </form>
+  {{ myForm.value | json }}
+  

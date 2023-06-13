@@ -1,0 +1,26 @@
+<div class="tableclass">
+<table>
+    <button (click)="backToForm()">back</button>
+    <thead>
+        <th>Name</th>
+        <th>email</th>
+        <th>Comments</th>
+        <th>Actions</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of studentDetails " >
+            <td>
+                {{e.contactName}}
+            </td>
+            <td>
+                {{e.Email}}
+            </td>
+            <td>
+                {{e.Comments}}
+            </td>
+        
+<td> <button (click)="editUser(e.id)">edit</button><button (click)=" deleteUser(e.id)" >delete</button></td>
+        </tr>
+    </tbody>
+</table>
+</div>

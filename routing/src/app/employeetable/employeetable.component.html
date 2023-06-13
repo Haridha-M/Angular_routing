@@ -1,0 +1,39 @@
+<p>employeetable works!</p>
+<div class="tableclass">
+    <table>
+        <button (click)="backToEmployeeForm()">back</button>
+        <thead>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Location</th>
+            <th>Gender</th>
+            <th>Color</th>
+            <th>Hobbies</th>
+            <th>Actions</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let e of PersonDetails " >
+                <td>
+                    {{e.name}}
+                </td>
+                <td>
+                    {{e.age}}
+                </td>
+                <td>
+                    {{e.location}}
+                </td>
+                <td>
+                    {{e.gender}}
+                </td>
+                <td>
+                    {{e.color}}
+                </td>
+                <td>
+                    {{e.hobbies}}
+                </td>
+            
+    <td> <button (click)="editUserEmployee(e.id)">edit</button><button (click)=" deleteUserEmployee(e.id)" >delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>

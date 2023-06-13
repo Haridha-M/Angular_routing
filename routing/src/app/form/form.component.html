@@ -1,0 +1,23 @@
+<p>form works</p>
+<div class="formclass">
+<div class="form">
+    <h1>Form</h1>
+    <div class="gap">
+        <label for="exampleFormControlName1" class="form-label">Name</label>
+        <input type="name" class="form-control" id="Name1" [(ngModel)]="contactName">
+    </div>
+    <div class="gap">
+        <label for="exampleFormControlEmail1" class="form-label">Email</label>
+        <input type="email" class="form-control" id="Email1"[(ngModel)]="Email">
+    </div>
+    <div class="gap">
+        <label for="exampleFormControlTextarea1" class="form-label">Comments</label>
+        <textarea class="form-control1" id="Comments1" rows="3" [(ngModel)]="Comments"></textarea>
+    </div>
+   
+    <button (click)="insertUser()"  [hidden]="visible" >Submit</button>
+    <button (click)="updateUser()" [hidden]="!visible">update</button>
+    <button (click)="get()">Next</button>
+    
+</div>
+</div>
